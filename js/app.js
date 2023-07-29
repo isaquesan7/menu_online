@@ -587,9 +587,9 @@ cardapio.metodos = {
 
     carregarRedes: ()=>{
 
-        $("#rede-1").attr('href' , `https://www.instagram.com/${insta}`);
-        $("#rede-2").attr('href' , `https://www.facebook.com/${fb}`);
-        $("#rede-3").attr('href' , `http://wa.me/${phone}`);
+        $(".rede-1").attr('href' , `https://www.instagram.com/${insta}`);
+        $(".rede-2").attr('href' , `https://www.facebook.com/${fb}`);
+        $(".rede-3").attr('href' , `http://wa.me/${phone}`);
 
     },
 
