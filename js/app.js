@@ -425,6 +425,18 @@ cardapio.metodos = {
         let nome = $("#txtNome").val().trim();
         let telefone = $("#txtTelefone").val().trim();
 
+        if(nome.length <= 0){
+            cardapio.metodos.mensagem('Informe o seu Nome.');
+            $("#txtNome").focus();
+            return;
+        }
+
+        if(telefone.length <= 0){
+            cardapio.metodos.mensagem('Informe o seu Telefone.');
+            $("#txtTelefone").focus();
+            return;
+        }
+
         if(cep.length <= 0){
             cardapio.metodos.mensagem('Informe o CEP.');
             $("#txtCEP").focus();
@@ -458,18 +470,6 @@ cardapio.metodos = {
         if(numero.length <= 0){
             cardapio.metodos.mensagem('Informe o Numero da moradia.');
             $("#txtNumero").focus();
-            return;
-        }
-
-        if(nome.length <= 0){
-            cardapio.metodos.mensagem('Informe o seu Nome.');
-            $("#txtNome").focus();
-            return;
-        }
-
-        if(telefone.length <= 0){
-            cardapio.metodos.mensagem('Informe o seu Telefone.');
-            $("#txtTelefone").focus();
             return;
         }
 
@@ -613,6 +613,39 @@ cardapio.metodos = {
     }
 
 }
+
+//Formatar campo "Telefone" na pagina 2 do carrinho
+const formatarTelefone = {
+
+    numeroTelefone (value) {
+  
+      return value
+  
+        .replace(/\D/g, '')
+  
+        .replace(/(\d{2})(\d)/, '($1)$2')
+  
+        .replace(/(\d{4})(\d)/, '$1-$2')
+  
+        .replace(/(\d{4})-(\d)(\d{4})/, '$1$2-$3')
+  
+        .replace(/(-\d{4})\d+?$/, '$1')
+  
+    }
+  
+  }
+
+    document.querySelectorAll('input').forEach(($input) => {
+  
+        const field = $input.dataset.js
+  
+        $input.addEventListener('input', (e) => {
+  
+            e.target.value = formatarTelefone[field](e.target.value)
+  
+        }, false)
+  
+})
 
 cardapio.templates = {
 
