@@ -45,7 +45,8 @@ cardapio.metodos = {
 
         $.each(filtro, (i, e) =>{
 
-            let temp = cardapio.templates.item.replace(/\${img}/g, e.img)
+            let temp = cardapio.templates.item
+            .replace(/\${img}/g, e.img)
             .replace(/\${name}/g, e.name)
             .replace(/\${price}/g, e.price.toFixed(2).replace('.', ','))
             .replace(/\${id}/g, e.id);
@@ -176,10 +177,23 @@ cardapio.metodos = {
 
             $("#modalCarrinho").removeClass('hidden');
             cardapio.metodos.carregarCarrinho();
+            $(".header").addClass('hidden');
+            $(".banner").addClass('hidden');
+            $(".servicos").addClass('hidden');
+            $(".cardapio").addClass('hidden');
+            $(".depoimentos").addClass('hidden');
+            $(".reserva").addClass('hidden');
 
         }else{
 
             $("#modalCarrinho").addClass('hidden');
+            $(".header").removeClass('hidden');
+            $(".banner").removeClass('hidden');
+            $(".servicos").removeClass('hidden');
+            $(".cardapio").removeClass('hidden');
+            $(".depoimentos").removeClass('hidden');
+            $(".reserva").removeClass('hidden');
+            $("#txtPesquisar").focus();
 
         }
 
@@ -610,7 +624,7 @@ cardapio.metodos = {
             }, 800);
         }, tempo);
 
-    }
+    },
 
 }
 
@@ -635,11 +649,11 @@ const formatarTelefone = {
   
   }
 
-    document.querySelectorAll('input').forEach(($input) => {
+    document.querySelectorAll("input[type='tel']").forEach(($input) => {
   
         const field = $input.dataset.js
   
-        $input.addEventListener('input', (e) => {
+        $input.addEventListener("input", (e) => {
   
             e.target.value = formatarTelefone[field](e.target.value)
   
