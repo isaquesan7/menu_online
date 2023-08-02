@@ -17,7 +17,7 @@ var MEU_ENDERECO = null;
 
 var phone = '5571992105621';
 
-var insta = 'isaquesan77';
+var insta = 'dev.outs';
 
 var fb = 'isaquess7';
 
