@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 })
 
+//Variáveis
 var cardapio = {};
 
 var MEU_CARRINHO = [];
@@ -24,6 +25,7 @@ var totalProdutos = 72;
 
 var minProdutos = 8;
 
+//Eventos de iniciação do site
 cardapio.eventos = {
 
     init: () => {
@@ -31,15 +33,15 @@ cardapio.eventos = {
         cardapio.metodos.carregarReserva();
         cardapio.metodos.carregarBotaoLigar();
         cardapio.metodos.carregarRedes();
-        cardapio.metodos.search();
     }
 
 }
 
+//Configuração geral do site
 cardapio.metodos = {
 
     //obtém a lista de itens do cardápio.
-    obterItensCardapio: (categoria = 'todos', vermais = false) => {
+    obterItensCardapio: (categoria = 'burgers', vermais = false) => {
 
         var filtro = MENU[categoria];
 
@@ -589,6 +591,7 @@ cardapio.metodos = {
         $("#fazerLigacao").attr('href' , `tel:${phone}`);
     },
 
+    //alterna entre depoimentos
     abrirDepoimento: (depoimento)=>{
 
         $("#depoimento-1").addClass('hidden');
@@ -604,6 +607,7 @@ cardapio.metodos = {
 
     },
 
+    //carrega as paginas das redes sociais
     carregarRedes: ()=>{
 
         $(".rede-1").attr('href' , `https://www.instagram.com/${insta}`);
@@ -613,7 +617,8 @@ cardapio.metodos = {
     },
 
     //executa a pesquisa de produto
-    search: ()=>{
+    search: () => {
+
         let input = document.getElementById('txtPesquisar').value;
         input=input.toLowerCase();
         let x = document.getElementsByClassName('produto');
@@ -626,9 +631,15 @@ cardapio.metodos = {
             }
         }
 
-        if(i < totalProdutos){
+        if(i >= minProdutos && i < totalProdutos){
+            cardapio.metodos.obterItensCardapio('todos');
             cardapio.metodos.verMais();
         }
+
+        if(!input){
+            cardapio.metodos.obterItensCardapio();
+        }
+
 
     },
 
@@ -672,9 +683,10 @@ const formatarTelefone = {
   
     }
   
-  }
+}
 
-    document.querySelectorAll("input[type='tel']").forEach(($input) => {
+//Continuação do "Formatar Telefone"
+document.querySelectorAll("input[type='tel']").forEach(($input) => {
   
         const field = $input.dataset.js
   
@@ -686,6 +698,7 @@ const formatarTelefone = {
   
 })
 
+//Templates dos produtos
 cardapio.templates = {
 
     item:
