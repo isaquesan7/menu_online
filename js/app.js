@@ -630,10 +630,6 @@ cardapio.metodos = {
             cardapio.metodos.verMais();
         }
 
-        if(!input){
-            cardapio.metodos.obterItensCardapio();
-        }
-
     },
 
     //mensagens
