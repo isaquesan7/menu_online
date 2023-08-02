@@ -171,6 +171,7 @@
                 </div>
 
                 <div class="col-12 col-one container-menu wow fadeInUp">
+                    <a id="menu-todos" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio()"><i class="fas fa-grin-stars"></i>&nbsp; Todos</a>
                     <a id="menu-burgers" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('burgers')"><i class="fas fa-hamburger"></i>&nbsp; Burgers</a>
                     <a id="menu-pizzas" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('pizzas')"><i class="fas fa-pizza-slice"></i>&nbsp; Pizzas</a>
                     <a id="menu-churrasco" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('churrasco')"><i class="fas fa-drumstick-bite"></i>&nbsp; Churrasco</a>
@@ -180,7 +181,7 @@
                 </div>
 
                 <div class="col-12 col-one">
-                    <div class="pesquisar"><input type="search" id="txtPesquisar" placeholder="Buscar..."><i class="fas fa-search"></i></div>
+                    <div class="pesquisar wow fadeInUp"><input type="search" id="txtPesquisar" placeholder="Buscar no Cardápio..." onkeyup="cardapio.metodos.search()" onclick="cardapio.metodos.obterItensCardapio()"><i class="fas fa-search"></i></div>
                     <div class="row" id="itensCardapio">
 
                     </div>

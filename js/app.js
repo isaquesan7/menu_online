@@ -20,6 +20,10 @@ var insta = 'isaquesan77';
 
 var fb = 'isaquess7';
 
+var totalProdutos = 72;
+
+var minProdutos = 8;
+
 cardapio.eventos = {
 
     init: () => {
@@ -27,6 +31,7 @@ cardapio.eventos = {
         cardapio.metodos.carregarReserva();
         cardapio.metodos.carregarBotaoLigar();
         cardapio.metodos.carregarRedes();
+        cardapio.metodos.search();
     }
 
 }
@@ -34,7 +39,7 @@ cardapio.eventos = {
 cardapio.metodos = {
 
     //obtém a lista de itens do cardápio.
-    obterItensCardapio: (categoria = 'burgers', vermais = false) => {
+    obterItensCardapio: (categoria = 'todos', vermais = false) => {
 
         var filtro = MENU[categoria];
 
@@ -51,13 +56,13 @@ cardapio.metodos = {
             .replace(/\${price}/g, e.price.toFixed(2).replace('.', ','))
             .replace(/\${id}/g, e.id);
 
-            //botão ver mais foi clicado (12 itens)
-            if(vermais && i >= 8 && i < 12){
+            //botão ver mais foi clicado (total itens)
+            if(vermais && i >= minProdutos && i < totalProdutos){
                 $("#itensCardapio").append(temp)
             }
 
             //pagina inicial (8 itens)
-            if(!vermais && i < 8){
+            if(!vermais && i < minProdutos){
                 $("#itensCardapio").append(temp)
             }
 
@@ -193,7 +198,7 @@ cardapio.metodos = {
             $(".cardapio").removeClass('hidden');
             $(".depoimentos").removeClass('hidden');
             $(".reserva").removeClass('hidden');
-            $("#txtPesquisar").focus();
+            window.location.href = "#cardapio";
 
         }
 
@@ -607,6 +612,30 @@ cardapio.metodos = {
 
     },
 
+    //executa a pesquisa de produto
+    search: ()=>{
+        let input = document.getElementById('txtPesquisar').value;
+        input=input.toLowerCase();
+        let x = document.getElementsByClassName('produto');
+      
+        for (i = 0; i < x.length; i++) {
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display="none";
+            }else{
+                x[i].style.display="flex";               
+            }
+        }
+
+        if(i < totalProdutos){
+            cardapio.metodos.verMais();
+        }
+
+        if(!input){
+            cardapio.metodos.obterItensCardapio();
+        }
+
+    },
+
     //mensagens
     mensagem: (texto, cor = 'red', tempo = 3500) =>{
 
@@ -666,7 +695,7 @@ cardapio.templates = {
     item:
         `
 
-                    <div class="col-12 col-lg-3 col-md-3 col-sm-6 mb-5 animated fadeInUp">
+                    <div class="col-12 col-lg-3 col-md-3 col-sm-6 mb-5 animated fadeIn produto">
 
                         <div class="card card-item" id="\${id}">
 
