@@ -90,21 +90,21 @@ var MENU = {
             "id": "the-gramercy-tavern-burger-4-pack",
             "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-15.jpg",
             "name": "Gramercy Tavern",
-            "dsc": "The Gramercy Tavern Burger - 4 Pack",
-            "price": 99
+            "dsc": "Pão de Alho, Carne Bovina 150g, Queijo Mussarela, Bacon Frito, Molho Especial.",
+            "price": 80
         },
         {
             "id": "shake-shack-shackburger-8-pack",
             "img": "./img/cardapio/burguers/shake-shack-shackburger-8-pack.973a5e26836ea86d7e86a327becea2b0.jpg",
             "name": "Shake Shack",
-            "dsc": "Shake Shack ShackBurger® - 8 Pack",
+            "dsc": "Pão de Batata, Carne Suína 130g, Tomate, Alface, Queijo Cheddar, Molho da Casa.",
             "price": 49
         },
         {
             "id": "gotts-cheeseburger-kit-for-4",
             "img": "./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-4.7bdc74104b193427b3fe6eae39e05b5e.jpg",
             "name": "Gott's Roadside",
-            "dsc": "Gott's Complete Cheeseburger Kit for 4",
+            "dsc": "Pão de Batata, Carne Bovina 200g, Alface, Tomate, Picles, Bacon Frito, Molho Picante",
             "price": 99
         },
         {
@@ -604,21 +604,21 @@ var MENU = {
             "id": "the-gramercy-tavern-burger-4-pack",
             "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-15.jpg",
             "name": "Gramercy Tavern",
-            "dsc": "The Gramercy Tavern Burger - 4 Pack",
-            "price": 99
+            "dsc": "Pão de Alho, Carne Bovina 150g, Queijo Mussarela, Bacon Frito, Molho Especial.",
+            "price": 80
         },
         {
             "id": "shake-shack-shackburger-8-pack",
             "img": "./img/cardapio/burguers/shake-shack-shackburger-8-pack.973a5e26836ea86d7e86a327becea2b0.jpg",
             "name": "Shake Shack",
-            "dsc": "Shake Shack ShackBurger® - 8 Pack",
+            "dsc": "Pão de Batata, Carne Suína 130g, Tomate, Alface, Queijo Cheddar, Molho da Casa.",
             "price": 49
         },
         {
             "id": "gotts-cheeseburger-kit-for-4",
             "img": "./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-4.7bdc74104b193427b3fe6eae39e05b5e.jpg",
             "name": "Gott's Roadside",
-            "dsc": "Gott's Complete Cheeseburger Kit for 4",
+            "dsc": "Pão de Batata, Carne Bovina 200g, Alface, Tomate, Picles, Bacon Frito, Molho Picante",
             "price": 99
         },
         {

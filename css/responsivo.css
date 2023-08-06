@@ -78,33 +78,43 @@
         padding-bottom: 15px;
     }
 
+    .pesquisar{
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
     .img-produto{
         position: absolute;
-        left: 15px;
+        left: 10px;
     }
 
     .card-item{
-        height: 110px;
+        height: 170px;
         padding-left: 110px;
         justify-content: center;
         align-items: start;
     }
 
     .card-item .img-produto img{
-        width: 80px;
+        width: 90px;
     }
 
     .title-produto{
         margin-top: 0 !important;
         height: 30px !important;
         width: 100%;
-        text-align: left !important;
+        text-align: center !important;
+    }
+
+    .dsc-produto{
+        font-size: 14px !important;
+        height: 70px !important;
     }
 
     .price-produto{
         margin-bottom: 0 !important;
         margin-top: 0 !important;
-        font-size: 22px !important;
+        font-size: 28px !important;
     }
 
     .card-item .add-carrinho{
