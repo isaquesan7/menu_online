@@ -446,6 +446,8 @@ cardapio.metodos = {
         let complemento = $("#txtComplemento").val().trim();
         let nome = $("#txtNome").val().trim();
         let telefone = $("#txtTelefone").val().trim();
+        let pagamento = $("input[name='formaPagamento']:checked");
+        let pag = "";
 
         if(nome.length <= 0){
             cardapio.metodos.mensagem('Informe o seu Nome.');
@@ -495,6 +497,25 @@ cardapio.metodos = {
             return;
         }
 
+        if(pagamento.length <= 0){
+            cardapio.metodos.mensagem('Informe a forma de pagamento.');
+            return;
+        }
+
+        if(document.getElementById("checkCartao").checked){
+            pag = "Cartão (Crédito/Débito)";
+
+        }
+        
+        if(document.getElementById("checkDinheiro").checked){
+            pag = "Dinheiro (Espécie)";
+
+        }
+        
+        if(document.getElementById("checkPix").checked){
+            pag = "Pix";
+        }
+
         MEU_ENDERECO = {
             cep: cep,
             endereco: endereco,
@@ -504,7 +525,9 @@ cardapio.metodos = {
             numero: numero,
             complemento: complemento,
             nome: nome,
-            telefone: telefone
+            telefone: telefone,
+            pagamento: pagamento,
+            pag: pag
         }
 
         cardapio.metodos.carregarEtapas(3);
@@ -549,6 +572,9 @@ cardapio.metodos = {
             texto += `\n\n*Total (com entrega): R$ ${(VALOR_CARRINHO + VALOR_ENTREGA).toFixed(2).replace('.' , ',')}*`;
             texto += `\n\n\n*Nome: ${MEU_ENDERECO.nome}*`;
             texto += `\n*Telefone: ${MEU_ENDERECO.telefone}*`;
+            texto += `\n\nForma de pagamento: *${MEU_ENDERECO.pag}*`;
+            texto += `\n\n*----AVISO----*`;
+            texto += `\n\nPagamentos no *Pix* só serão validados mediante envio do comprovante nesta conversa.\nPagamentos no *Cartão* tem um acréscimo de *R$ 1,00* devido a taxa da maquininha.`;
 
             var itens = '';
 
