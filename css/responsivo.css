@@ -86,11 +86,11 @@
     .img-produto{
         position: absolute;
         left: 10px;
-        top: 10px;
+        top: 8px;
     }
 
     .card-item{
-        height: 190px;
+        height: 195px;
         padding-left: 110px;
         justify-content: center;
         align-items: start;
@@ -101,7 +101,7 @@
     }
 
     .title-produto{
-        margin-top: -70px !important;
+        margin-top: -90px !important;
         width: 100%;
     }
 
@@ -111,7 +111,6 @@
     }
 
     .price-produto{
-        top: 0px !important;
         font-size: 25px !important;
         width: 100%;
     }

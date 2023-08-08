@@ -526,7 +526,6 @@ cardapio.metodos = {
             complemento: complemento,
             nome: nome,
             telefone: telefone,
-            pagamento: pagamento,
             pag: pag
         }
 
@@ -690,6 +689,15 @@ cardapio.metodos = {
     },
 
 }
+
+//Formatar campo de "Pesquisa de produto" para aceitar somente letras
+$("#txtPesquisar").on("input", function(){
+    var regexp = /[^a-zA-Z]/g;
+    if(this.value.match(regexp)){
+      $(this).val(this.value.replace(regexp,''));
+      cardapio.metodos.mensagem('Caractere Inválido.');
+    }
+});
 
 //Formatar campo "Telefone" na pagina 2 do carrinho
 const formatarTelefone = {

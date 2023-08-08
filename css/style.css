@@ -267,11 +267,11 @@ a.navbar-brand{
 }
 
 .card-item .dsc-produto{
-    font-size: 16px;
+    font-size: 15px;
     color: var(--color-text-out);
     height: 0 !important;
     margin-top: 0 !important;
-    text-align: justify !important;
+    text-align: center !important;
 }
 
 .card-item .price-produto{

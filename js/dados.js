@@ -90,7 +90,7 @@ var MENU = {
             "id": "the-gramercy-tavern-burger-4-pack",
             "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-15.jpg",
             "name": "Gramercy Tavern",
-            "dsc": "Pão de Alho, Carne Bovina 150g, Queijo Mussarela, Bacon Frito, Molho Especial.",
+            "dsc": "Pão de Alho, Carne Bovina 200g, Queijo Mussarela, Bacon Frito, Molho Especial.",
             "price": 80
         },
         {
@@ -105,70 +105,70 @@ var MENU = {
             "img": "./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-4.7bdc74104b193427b3fe6eae39e05b5e.jpg",
             "name": "Gott's Roadside",
             "dsc": "Pão de Batata, Carne Bovina 200g, Alface, Tomate, Picles, Bacon Frito, Molho Picante",
-            "price": 99
+            "price": 80
         },
         {
             "id": "le-big-matt-kit-for-6",
             "img": "./img/cardapio/burguers/le-big-matt-kit-for-6.1ddae6e382bb3218eeb0fd5247de115a.jpg",
             "name": "Emmy Squared",
-            "dsc": "Le Big Matt Burger Kit for 6",
+            "dsc": "Pão Brioche, 2 Carnes Bovinas 130g, Rúcula, Picles, Queijo Mussarela, Molho Cheddar.",
             "price": 99
         },
         {
             "id": "shake-shack-shackburger-16-pack",
             "img": "./img/cardapio/burguers/shake-shack-shackburger-16-pack.316f8b09144db65931ea29e34869287a.jpg",
-            "name": "Shake Shack",
-            "dsc": "Shake Shack Shackburger® - 16 Pack",
+            "name": "Shake Shack - P/2",
+            "dsc": "Pão de Batata, Carne Suína 130g, Tomate, Alface, Queijo Cheddar, Molho da Casa.",
             "price": 89
         },
         {
             "id": "21-usda-prime-burgers-pack-of-18-8oz-each",
             "img": "./img/cardapio/burguers/usda-prime-burgers-pack-of-18-8oz-each.274c67f15aa1c0b210dbf51801706670.jpg",
             "name": "Peter Luger Steak House",
-            "dsc": "USDA Prime Burgers - Pack of 18 (8oz each)",
+            "dsc": "Pão Italiano, Carne Bovina 300g, Linguiça Grelhada, Cebola, Batata Assada, Molho Barbecue.",
             "price": 175.95
         },
         {
             "id": "double-stack-burger-kit-for-4",
             "img": "./img/cardapio/burguers/handf-double-stack-burger-kit-for-4.4ee9f54b1d6087e9996335f07c13e5cd.jpg",
             "name": "Holeman & Finch",
-            "dsc": "Double Stack Burger Kit for 4",
+            "dsc": "Pão de Cebola, 2 Carnes Suína 130g, Queijo Prato, Picles, Molho da Casa.",
             "price": 79
         },
         {
             "id": "goldbelly-burger-bash-pack",
             "img": "./img/cardapio/burguers/the-burger-bash-package.bd9d12d031865940bbe5faf15f1a62f8.jpg",
             "name": "Pat LaFrieda Meats",
-            "dsc": "Goldbelly \"Burger Bash\" Pack",
+            "dsc": "Pão Australiano, Carne Bovina 150g, Queijo Prato, Tomate, Alface, Cebola Caramelizada, Molho Especial.",
             "price": 109
         },
         {
             "id": "burger-au-poivre-kit-4-pack",
             "img": "./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg",
             "name": "Raoul's",
-            "dsc": "Burger Au Poivre Kit - 4 Pack",
+            "dsc": "Pão de Azeite, Carne Bovina 300g, Queijo Coalho, Alface, Rúcula, Cebola, Molho Mostarda e Mel.",
             "price": 99
         },
         {
             "id": "goldbelly-burger-blend-4-lbs",
             "img": "./img/cardapio/burguers/goldbelly-burger-blend-1-lb.13a21b66edf7173a59c75c3a6d2f981b.jpg",
             "name": "Flannery Beef",
-            "dsc": "Goldbelly Burger Blend - 4 lbs.",
+            "dsc": "Tartar de Filé-mignon temperado 200g e Cebola crua.",
             "price": 79
         },
         {
             "id": "gotts-complete-cheeseburger-kit-for-8",
             "img": "./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-8.092aa049d00286fa1733d720decc782e.jpg",
-            "name": "Gott's Roadside",
-            "dsc": "Gott's Complete Cheeseburger Kit for 8",
-            "price": 149
+            "name": "Gott's Roadside - P/2",
+            "dsc": "Pão de Batata, Carne Bovina 200g, Alface, Tomate, Picles, Bacon Frito, Molho Picante",
+            "price": 150
         },
         {
             "id": "gramercy-tavern-burger-kielbasa-combo",
             "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-47.jpg",
-            "name": "Gramercy Tavern",
+            "name": "Tavern Combo",
             "dsc": "Gramercy Tavern Burger + Kielbasa Combo",
-            "price": 149
+            "price": 150
         }
     ],
     "sobremesas": [
@@ -604,7 +604,7 @@ var MENU = {
             "id": "the-gramercy-tavern-burger-4-pack",
             "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-15.jpg",
             "name": "Gramercy Tavern",
-            "dsc": "Pão de Alho, Carne Bovina 150g, Queijo Mussarela, Bacon Frito, Molho Especial.",
+            "dsc": "Pão de Alho, Carne Bovina 200g, Queijo Mussarela, Bacon Frito, Molho Especial.",
             "price": 80
         },
         {
@@ -619,70 +619,70 @@ var MENU = {
             "img": "./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-4.7bdc74104b193427b3fe6eae39e05b5e.jpg",
             "name": "Gott's Roadside",
             "dsc": "Pão de Batata, Carne Bovina 200g, Alface, Tomate, Picles, Bacon Frito, Molho Picante",
-            "price": 99
+            "price": 80
         },
         {
             "id": "le-big-matt-kit-for-6",
             "img": "./img/cardapio/burguers/le-big-matt-kit-for-6.1ddae6e382bb3218eeb0fd5247de115a.jpg",
             "name": "Emmy Squared",
-            "dsc": "Le Big Matt Burger Kit for 6",
+            "dsc": "Pão Brioche, 2 Carnes Bovinas 130g, Rúcula, Picles, Queijo Mussarela, Molho Cheddar.",
             "price": 99
         },
         {
             "id": "shake-shack-shackburger-16-pack",
             "img": "./img/cardapio/burguers/shake-shack-shackburger-16-pack.316f8b09144db65931ea29e34869287a.jpg",
-            "name": "Shake Shack",
-            "dsc": "Shake Shack Shackburger® - 16 Pack",
+            "name": "Shake Shack - P/2",
+            "dsc": "Pão de Batata, Carne Suína 130g, Tomate, Alface, Queijo Cheddar, Molho da Casa.",
             "price": 89
         },
         {
             "id": "21-usda-prime-burgers-pack-of-18-8oz-each",
             "img": "./img/cardapio/burguers/usda-prime-burgers-pack-of-18-8oz-each.274c67f15aa1c0b210dbf51801706670.jpg",
             "name": "Peter Luger Steak House",
-            "dsc": "USDA Prime Burgers - Pack of 18 (8oz each)",
+            "dsc": "Pão Italiano, Carne Bovina 300g, Linguiça Grelhada, Cebola, Batata Assada, Molho Barbecue.",
             "price": 175.95
         },
         {
             "id": "double-stack-burger-kit-for-4",
             "img": "./img/cardapio/burguers/handf-double-stack-burger-kit-for-4.4ee9f54b1d6087e9996335f07c13e5cd.jpg",
             "name": "Holeman & Finch",
-            "dsc": "Double Stack Burger Kit for 4",
+            "dsc": "Pão de Cebola, 2 Carnes Suína 130g, Queijo Prato, Picles, Molho da Casa.",
             "price": 79
         },
         {
             "id": "goldbelly-burger-bash-pack",
             "img": "./img/cardapio/burguers/the-burger-bash-package.bd9d12d031865940bbe5faf15f1a62f8.jpg",
             "name": "Pat LaFrieda Meats",
-            "dsc": "Goldbelly \"Burger Bash\" Pack",
+            "dsc": "Pão Australiano, Carne Bovina 150g, Queijo Prato, Tomate, Alface, Cebola Caramelizada, Molho Especial.",
             "price": 109
         },
         {
             "id": "burger-au-poivre-kit-4-pack",
             "img": "./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg",
             "name": "Raoul's",
-            "dsc": "Burger Au Poivre Kit - 4 Pack",
+            "dsc": "Pão de Azeite, Carne Bovina 300g, Queijo Coalho, Alface, Rúcula, Cebola, Molho Mostarda e Mel.",
             "price": 99
         },
         {
             "id": "goldbelly-burger-blend-4-lbs",
             "img": "./img/cardapio/burguers/goldbelly-burger-blend-1-lb.13a21b66edf7173a59c75c3a6d2f981b.jpg",
             "name": "Flannery Beef",
-            "dsc": "Goldbelly Burger Blend - 4 lbs.",
+            "dsc": "Tartar de Filé-mignon temperado 200g e Cebola crua.",
             "price": 79
         },
         {
             "id": "gotts-complete-cheeseburger-kit-for-8",
             "img": "./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-8.092aa049d00286fa1733d720decc782e.jpg",
-            "name": "Gott's Roadside",
-            "dsc": "Gott's Complete Cheeseburger Kit for 8",
-            "price": 149
+            "name": "Gott's Roadside - P/2",
+            "dsc": "Pão de Batata, Carne Bovina 200g, Alface, Tomate, Picles, Bacon Frito, Molho Picante",
+            "price": 150
         },
         {
             "id": "gramercy-tavern-burger-kielbasa-combo",
             "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-47.jpg",
-            "name": "Gramercy Tavern",
+            "name": "Tavern Combo",
             "dsc": "Gramercy Tavern Burger + Kielbasa Combo",
-            "price": 149
+            "price": 150
         },
         {
             "id": "15259-german-chocolate-killer-brownie-tin-pack",
