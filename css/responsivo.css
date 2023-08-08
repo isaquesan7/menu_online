@@ -90,7 +90,7 @@
     }
 
     .card-item{
-        height: 160px;
+        height: 190px;
         padding-left: 110px;
         justify-content: center;
         align-items: start;
@@ -101,7 +101,7 @@
     }
 
     .title-produto{
-        margin-top: -50px !important;
+        margin-top: -70px !important;
         width: 100%;
     }
 
