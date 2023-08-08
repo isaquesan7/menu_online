@@ -249,7 +249,7 @@ a.navbar-brand{
 }
 
 .card-item{
-    height: 400px;
+    height: 450px;
 }
 
 .card-item .img-produto img{
@@ -267,14 +267,17 @@ a.navbar-brand{
 }
 
 .card-item .dsc-produto{
-    font-size: 14px;
+    font-size: 16px;
     color: var(--color-text-out);
+    height: 0 !important;
+    margin-top: 0 !important;
+    text-align: justify !important;
 }
 
 .card-item .price-produto{
     color: var(--color-primary);
     font-size: 30px;
-    display: none;
+    height: 30px !important;
 }
 
 .card-item .add-carrinho{
@@ -337,12 +340,12 @@ a.navbar-brand{
 
 .card-item:hover .add-carrinho{
     display: flex;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .card-item:hover .price-produto{
     color: var(--color-black-heavy)!important;
-    margin-top: 20px;
+    margin-top: 50px;
     display: block;
 }
 

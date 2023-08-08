@@ -717,12 +717,12 @@ cardapio.templates = {
                                 <b>\${name}</b>
                             </p>
 
-                            <p class="dsc-produto text-center mt-4">
-                                \${dsc}
-                            </p>
-
                             <p class="price-produto text-center">
                                 <b>R$ \${price}</b>
+                            </p>
+  
+                            <p class="dsc-produto text-center mt-4">
+                                \${dsc}
                             </p>
 
                             <div class="add-carrinho">
