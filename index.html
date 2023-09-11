@@ -180,8 +180,9 @@
                     <a id="menu-sobremesas" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('sobremesas')"><i class="fas fa-ice-cream"></i>&nbsp; Sobremesas</a>
                 </div>
 
-                <div class="col-12 col-one">
-                    <div class="pesquisar wow fadeInUp"><input type="search" id="txtPesquisar" placeholder="Buscar no Cardápio..." onkeyup="cardapio.metodos.search()"><i class="fas fa-search"></i></div>
+                <div class="col-12 col-one wow fadeInUp">
+                    <div class="pesquisar"><input type="search" id="txtPesquisar" placeholder="Buscar no Cardápio..." onkeyup="cardapio.metodos.search()"><i class="fas fa-search"></i></div>
+                    <p class="aviso"><i class="fas fa-exclamation-circle"></i> PARA MAIS INFORMAÇÕES <i class="fas fa-exclamation-circle"></i><br>CLIQUE NA IMAGEM DO PRODUTO!</p>
                     <div class="row" id="itensCardapio">
 
                     </div>
@@ -543,6 +544,7 @@
                         <div class="dados-produto">
                             <p class="texto-endereco"><b id="resumoEndereco"></b></p>
                             <p class="cidade-endereco" id="cidadeEndereco"></p>
+                            <p class="forma-pagamento" id="formaPagamento"></p>
                         </div>
                     </div>
 
@@ -586,7 +588,7 @@
     </div>
 
     <div class="container-modal animated fadeIn hidden"  id="modal-info">
-        <div class="modal col-12">
+        <div class="modal">
             <div class="btn-close" onclick="cardapio.metodos.abrirInfo(false)"><i class="fas fa-times"></i></div>
             <div id="modal-content"></div>
         </div>

@@ -665,7 +665,7 @@ select.form-control{
 .container-cep .btn{
     position: absolute;
     right: 25px;
-    top: 38px;
+    top: 39px;
 }
 
 .img-produto-resumo img{
@@ -709,6 +709,7 @@ select.form-control{
     justify-content: center;
     align-items: center;
     border-radius: 11px;
+    margin-bottom: 20px;
 }
 
 .texto-endereco{
@@ -750,7 +751,7 @@ select.form-control{
     color: var(--color-black-heavy)!important;
     border-radius: 50px;
     cursor: pointer;
-    z-index: 9999999999;
+    z-index: 999;
 }
 
 .container-mensagens{
@@ -857,9 +858,8 @@ select.form-control{
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
-    border: 1px solid var(--color-black);
+    margin:10px;
 }
 
 .modal .btn-close i{
@@ -916,4 +916,15 @@ select.form-control{
     height: 30px;
     justify-content: center;
     align-items: center;
+}
+
+.aviso{
+    text-align: center;
+    color: var(--color-red);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.forma-pagamento{
+    color: var(--color-red);
 }

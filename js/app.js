@@ -191,6 +191,7 @@ cardapio.metodos = {
             $(".cardapio").addClass('hidden');
             $(".depoimentos").addClass('hidden');
             $(".reserva").addClass('hidden');
+            $(".container-modal").addClass('hidden');
 
         }else{
 
@@ -551,7 +552,8 @@ cardapio.metodos = {
         })
 
         $("#resumoEndereco").html(`${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero} - ${MEU_ENDERECO.bairro}`);
-        $("#cidadeEndereco").html(`${MEU_ENDERECO.cidade} - ${MEU_ENDERECO.uf}, ${MEU_ENDERECO.cep} &nbsp; ${MEU_ENDERECO.complemento}`);
+        $("#cidadeEndereco").html(`${MEU_ENDERECO.cidade} - ${MEU_ENDERECO.uf}, ${MEU_ENDERECO.cep}&nbsp;${MEU_ENDERECO.complemento}`);
+        $("#formaPagamento").html(`\n\n<b>Forma de Pagamento: ${MEU_ENDERECO.pag}</b>`);
 
         cardapio.metodos.finalizarPedido();
 
@@ -572,8 +574,17 @@ cardapio.metodos = {
             texto += `\n\n\n*Nome: ${MEU_ENDERECO.nome}*`;
             texto += `\n*Telefone: ${MEU_ENDERECO.telefone}*`;
             texto += `\n\nForma de pagamento: *${MEU_ENDERECO.pag}*`;
-            texto += `\n\n*----AVISO----*`;
-            texto += `\n\nPagamentos no *Pix* só serão validados mediante envio do comprovante nesta conversa.\nPagamentos no *Cartão* tem um acréscimo de *R$ 1,00* devido a taxa da maquininha.`;
+
+            if(document.getElementById("checkPix").checked){
+                texto += `\n\n*----AVISO----*`;
+                texto += `\n\nPagamentos no *Pix* só serão validados mediante envio do comprovante nesta conversa.`;
+                texto += `\n\nNossa chave pix: *AQUI VAI A CHAVE PIX*`;
+            }
+
+            if(document.getElementById("checkCartao").checked){
+                texto += `\n\n*----AVISO----*`;
+                texto += `\n\nPagamentos no *Cartão* tem um acréscimo de *R$ 1,00* devido a taxa da maquininha.`;
+            }
 
             var itens = '';
 
