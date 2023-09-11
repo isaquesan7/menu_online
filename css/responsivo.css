@@ -90,7 +90,7 @@
     }
 
     .card-item{
-        height: 195px;
+        height: 107px;
         padding-left: 110px;
         justify-content: center;
         align-items: start;
@@ -101,13 +101,12 @@
     }
 
     .title-produto{
-        margin-top: -90px !important;
+        margin-top: -10px !important;
         width: 100%;
     }
 
     .dsc-produto{
         font-size: 14px !important;
-        height: 70px !important;
     }
 
     .price-produto{
@@ -198,5 +197,62 @@
         margin-left: 8px;
     }
 
+    .modal{
+        width: 100%;
+    }
+    
+    .modal .btn-close i{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+    .modal-produto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-produto .img-produto{
+        position: relative;
+        top: 0;
+        left: auto;
+    }
+    
+    .modal-produto .img-produto img{
+        border-radius: 10px;
+        box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .modal-produto .title-produto{
+        font-size: 24px;
+        margin-bottom: 0;
+        margin-top: 25px !important;
+    }
+    
+    .modal-produto .dsc-produto p{
+        text-align: center;
+    }
+    
+    .modal-produto .dsc-produto ul li{
+        font-size: 20px !important;
+        list-style: square;
+    }
+    
+    .modal-produto .price-produto{
+        font-size: 35px;
+        color: var(--color-primary);
+    }
+    
+    .modal-produto .add-carrinho{
+        display: flex;
+        text-align: center;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+    }
 
 }

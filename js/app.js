@@ -669,6 +669,114 @@ cardapio.metodos = {
 
     },
 
+    abrirInfo: (id) =>{
+
+        let modal = document.getElementById('modal-content');
+
+        modal.innerHTML = '';
+
+        //obter a categoria ativa
+        var categoria = $(".container-menu a.active").attr('id').split('menu-')[1];
+
+        //obtem a lista de itens
+        let filtro = MENU[categoria];
+
+        //obter o item
+        let item = $.grep(filtro, (e, i) => {return e.id == id});
+
+        if(id){
+
+            $("#modal-info").removeClass('hidden');
+
+            for(i = 0; i < item.length; i++){
+                
+                $.each(item, (i, e) =>{
+                    let temp = cardapio.templates.itemModalInfo
+                    .replace(/\${img}/g, e.img)
+                    .replace(/\${name}/g, e.name)
+                    .replace(/\${dsc}/g, e.dsc)
+                    .replace(/\${price}/g, e.price.toFixed(2).replace('.', ','))
+                    .replace(/\${id}/g, e.id);
+
+                    $("#modal-content").append(temp);  
+                })
+            }
+            
+
+        }else{
+            $("#modal-info").addClass('hidden');
+        }
+        
+        
+    },
+
+    //diminuir quantidade do item no cardápio MODAL
+    diminuirQuantidadeModal: (id) =>{
+
+        let qntdAtual = parseInt($("#qntd_Modal-" + id).text());
+    
+        if(qntdAtual > 0){
+            $("#qntd_Modal-" + id).text(qntdAtual - 1);
+        }
+    
+    },
+    
+    //aumentar quantidade do item no cardápio MODAL
+    aumentarQuantidadeModal: (id) =>{
+    
+        let qntdAtual = parseInt($("#qntd_Modal-" + id).text());
+    
+        $("#qntd_Modal-" + id).text(qntdAtual + 1);
+    
+    },
+
+    //adicionar ao carrinho o item no cardápio MODAL
+    adicionarAoCarrinhoModal: (id) =>{
+
+        let qntdAtual = parseInt($("#qntd_Modal-" + id).text());
+    
+        if(qntdAtual > 0){
+                
+            //obter a categoria ativa
+            var categoria = $(".container-menu a.active").attr('id').split('menu-')[1];
+            
+            //obtem a lista de itens
+            let filtro = MENU[categoria];
+    
+            //obter o item
+            let item = $.grep(filtro, (e, i) => {return e.id == id});
+    
+            if(item.length > 0){
+    
+                //validar se ja existe o item no carrinho
+                let existe = $.grep(MEU_CARRINHO, (elem, index) => {return elem.id == id});
+    
+                //caso exista so altera a quantidade
+                if(existe.length > 0){
+    
+                    let objIndex = MEU_CARRINHO.findIndex((obj => obj.id == id));
+                    MEU_CARRINHO[objIndex].qntd = MEU_CARRINHO[objIndex].qntd + qntdAtual;
+    
+                }
+                //caso não exista, adiciona
+                else{
+    
+                    item[0].qntd = qntdAtual;
+                    MEU_CARRINHO.push(item[0])
+    
+                }
+    
+                cardapio.metodos.mensagem('Item adicionado ao carrinho', 'green');
+                $("#qntd_Modal-" + id).text(0);
+    
+                cardapio.metodos.atualizarBadgeTotal();
+    
+                }
+    
+            }
+    
+        },
+
     //mensagens
     mensagem: (texto, cor = 'red', tempo = 3500) =>{
 
@@ -743,7 +851,7 @@ cardapio.templates = {
 
                         <div class="card card-item" id="\${id}">
 
-                            <div class="img-produto">
+                            <div class="img-produto" onclick="cardapio.metodos.abrirInfo(\${id})">
                                 <img src="\${img}">
                             </div>
 
@@ -753,10 +861,6 @@ cardapio.templates = {
 
                             <p class="price-produto text-center">
                                 <b>R$ \${price}</b>
-                            </p>
-  
-                            <p class="dsc-produto text-center mt-4">
-                                \${dsc}
                             </p>
 
                             <div class="add-carrinho">
@@ -808,6 +912,37 @@ cardapio.templates = {
                         <p class="quantidade-produto-resumo">x <b>\${qntd}</b></p>
                     </div>
 
+        `,
+    itemModalInfo:
+        `
+                    <div class="modal-produto" id="\${id}">
+                        
+                        <div class="img-produto">
+                            <img src="\${img}">
+                        </div>
+
+                        <p class="title-produto text-center mt-4">
+                            <b>\${name}</b>
+                        </p>
+
+                        <div class="dsc-produto mt-4">
+                            <p>Descrição:</p>
+                            <ul>
+                                \${dsc}
+                            </ul>
+                        </div>
+
+                        <p class="price-produto text-center">
+                            <b>R$ \${price}</b>
+                        </p>
+
+                        <div class="add-carrinho">
+                            <span class="btn-menos" onclick="cardapio.metodos.diminuirQuantidadeModal('\${id}')"><i class="fas fa-minus"></i></span>
+                            <span class="add-numero-itens" id="qntd_Modal-\${id}">0</span>
+                            <span class="btn-mais" onclick="cardapio.metodos.aumentarQuantidadeModal('\${id}')"><i class="fas fa-plus"></i></span>
+                            <span class="btn btn-add" onclick="cardapio.metodos.adicionarAoCarrinhoModal('\${id}')"><i class="fas fa-shopping-bag"></i></span>
+                        </div>
+                    </div>
         `
 
 }
