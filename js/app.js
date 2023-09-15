@@ -17,7 +17,7 @@ var MEU_ENDERECO = null;
 
 var phone = '5571992105621';
 
-var insta = 'dev.outs';
+var insta = 'isaquesan77';
 
 var fb = 'isaquess7';
 
@@ -195,14 +195,14 @@ cardapio.metodos = {
 
         }else{
 
-            $("#modalCarrinho").addClass('hidden');
             $(".header").removeClass('hidden');
             $(".banner").removeClass('hidden');
             $(".servicos").removeClass('hidden');
             $(".cardapio").removeClass('hidden');
             $(".depoimentos").removeClass('hidden');
             $(".reserva").removeClass('hidden');
-            window.location.href = "#cardapio";
+            window.location.href = "#itensCardapio";
+            $("#modalCarrinho").addClass('hidden');
 
         }
 

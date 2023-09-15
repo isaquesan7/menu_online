@@ -12,6 +12,11 @@
     display: none;
   }
 
+.creditos a{
+    text-decoration: none;
+    color: var(--color-text);
+}
+
 :root{
     --color-background: #fffdf7;
     --color-black: #212121;
